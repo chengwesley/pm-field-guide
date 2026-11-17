@@ -226,7 +226,7 @@ After you change the skill, rerun these scenarios to catch regressions.
 
 ## License
 
-[MIT](LICENSE). Fork it and turn it into your team's version. If it helps, a star is appreciated 
+[MIT](LICENSE). Fork it and turn it into your team's version. If it helps, a star is appreciated.
 
 <div align="center">
 <sub>Made by Wesley Cheng</sub>
