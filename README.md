@@ -1,8 +1,8 @@
 <div align="center">
 
-# PM Field Guide
+# PM Field Guide｜PM 生存指南
 
-**一本會自己翻到對的那一頁的 PM 實戰手冊**
+**一本會自己翻到對的那一頁的 PM 生存指南**
 
 50 項軟體 PM 核心能力，做成一個 [Claude Code](https://claude.com/claude-code) skill。<br>
 你描述眼前的狀況，它找出該用的方法，先問清楚，再交出能直接拿去開會的東西。
