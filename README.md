@@ -2,21 +2,21 @@
 
 # PM Field Guide｜PM 生存指南
 
-**一本會自己翻到對的那一頁的 PM 生存指南**
+**不只是一本手冊，是站在你這邊的 PM agent**
 
-50 項軟體 PM 核心能力，做成一個 [Claude Code](https://claude.com/claude-code) skill。<br>
-你描述眼前的狀況，它找出該用的方法，先問清楚，再交出能直接拿去開會的東西。
+把軟體 PM 的 50 項核心能力做成一個 [Claude Code](https://claude.com/claude-code) skill。<br>
+它能幫你寫、幫你審、陪你練、帶你走完整個流程，數字用腳本算，還會記住你的產品。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Guides](https://img.shields.io/badge/guides-50-green)
-![Tools](https://img.shields.io/badge/%E5%B7%A5%E5%85%B7-4_%E8%85%B3%E6%9C%AC_%2B_3_%E8%A1%A8%E5%96%AE-yellow)
+![Tools](https://img.shields.io/badge/%E5%B7%A5%E5%85%B7-8_%E8%85%B3%E6%9C%AC_%2B_3_%E8%A1%A8%E5%96%AE-yellow)
 ![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-skill-orange)
 
-**50 份指南 · 4 支計算腳本 · 3 份 Excel 表單**
+**50 份指南 · 5 種工作模式 · 8 支計算腳本 · 3 份 Excel 表單**
 
 **繁體中文** ｜ [English](README.en.md)
 
-[為什麼需要它](#為什麼需要它) · [看它怎麼做](#看它怎麼做) · [情境對照](#你現在在哪個狀況) · [安裝](#安裝) · [內附工具](#內附工具會算的就不靠感覺) · [客製化](#改成你們團隊的版本)
+[為什麼需要它](#為什麼需要它) · [看它怎麼做](#看它怎麼做) · [五種工作模式](#五種工作模式) · [情境對照](#你現在在哪個狀況) · [安裝](#安裝) · [內附工具](#內附工具會算的就不靠感覺) · [客製化](#改成你們團隊的版本)
 
 </div>
 
@@ -53,6 +53,46 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 3. **評估與排序**：用 RICE 和其他候選需求放在一起比，影響範圍用 B2B 的單位（客戶家數、合約金額）。
 4. **給業務的回覆話術**：不直接答應，也不直接拒絕。
 5. **下一步**：每一項都有負責人和日期。
+
+## 五種工作模式
+
+同一套知識，依你當下要的東西換用法。不用下指令，照平常講話就會切到對的模式。
+
+<table width="100%">
+<tr><th width="120">模式</th><th width="300">你會說</th><th width="416">它會做什麼</th></tr>
+<tr><td><b>產出</b></td><td>「幫我寫 PRD」「需求怎麼排」「幫我準備明天的一對一」</td><td>先問缺的關鍵資訊，交出一份可以直接用的文件，結尾列出要你確認的事和下一步</td></tr>
+<tr><td><b>審查</b></td><td>「幫我看這份 PRD」「送出去前檢查一下」</td><td>不重寫你的文件。先用腳本找結構缺漏，再逐條對照品質檢查，把問題分成必改、建議、可忽略，每項附上可以直接貼的改寫</td></tr>
+<tr><td><b>演練</b></td><td>「陪我練一下」「你扮演我老闆」</td><td>扮演主管、RD 或業務，一次一句、會質疑會施壓，也會丟出你最怕聽到的那句話。結束後引用你說的原句給回饋</td></tr>
+<tr><td><b>劇本</b></td><td>「我剛接手這個產品」「規劃下一季」「帶我從頭做到上線」</td><td>先給整張步驟地圖，一次只把一步做完整，做完再問要不要往下</td></tr>
+<tr><td><b>計算</b></td><td>「算一下 LTV」「這個結果顯著嗎」「市場多大」</td><td>用腳本算，不用心算。告訴你數字代表什麼，以及哪個假設最該先查證</td></tr>
+</table>
+
+**它會記住你的產品。** 第一次用完，它會問要不要把這次確認的資訊存成 `.pm/product.md`。之後每次都先讀這份檔案和決策紀錄，不再重問同樣的問題；你的新要求和以前的決定衝突時，它會先提醒你。檔案放在你自己的資料夾，內容由你決定。
+
+<details>
+<summary><b>10 個端到端劇本（點開）</b></summary>
+
+<br>
+
+<table width="100%">
+<tr><th width="60">#</th><th width="320">劇本</th><th width="456">適用情境</th></tr>
+<tr><td>P1</td><td>新 PM 接手產品的前 30 天</td><td>剛到職、剛換線、接手別人的產品</td></tr>
+<tr><td>P2</td><td>季度規劃</td><td>要訂下一季做什麼、怎麼分配資源</td></tr>
+<tr><td>P3</td><td>新功能從想法到上線</td><td>一個功能要從模糊的需求做到發佈</td></tr>
+<tr><td>P4</td><td>插單處理</td><td>業務、大客戶或老闆臨時要加東西</td></tr>
+<tr><td>P5</td><td>時程對不上</td><td>主管要的日期和 RD 的估時差很多</td></tr>
+<tr><td>P6</td><td>上線準備</td><td>功能快做完，要準備發佈</td></tr>
+<tr><td>P7</td><td>上線後成效不如預期</td><td>數字不好看，要找原因和下一步</td></tr>
+<tr><td>P8</td><td>事故後復盤</td><td>上線出包、客訴爆量、對外承諾落空之後</td></tr>
+<tr><td>P9</td><td>定價或方案調整</td><td>要改價格、改方案結構、加收費功能</td></tr>
+<tr><td>P10</td><td>新市場或新產品線評估</td><td>老闆問「這個值不值得做」</td></tr>
+</table>
+
+每個劇本都有完整步驟、每一步的產出，以及時間不夠時的最小版本，寫在 [`modes/playbooks.md`](modes/playbooks.md)。
+
+</details>
+
+各模式的完整規則：[產品脈絡記憶](modes/context.md) · [審查](modes/review.md) · [演練](modes/rehearsal.md) · [劇本](modes/playbooks.md)
 
 ## 你現在在哪個狀況？
 
@@ -186,12 +226,16 @@ git clone https://github.com/chengwesley/pm-field-guide.git ~/.claude/skills/pm-
 <tr><td><code>rice.py</code></td><td>需求排序：算 RICE 分數、畫產能線、做敏感度分析（估值差兩倍，結論會不會變？）</td><td><code>python3 scripts/rice.py examples/rice.csv --capacity 4.5</code></td></tr>
 <tr><td><code>funnel.py</code></td><td>漏斗：各步轉換率、最大漏損點、跟前期比較是否顯著</td><td><code>python3 scripts/funnel.py examples/funnel.csv</code></td></tr>
 <tr><td><code>ab_test.py</code></td><td>A/B 測試：需要多少樣本、跑幾天；結果的顯著性、信賴區間、樣本比例失衡</td><td><code>python3 scripts/ab_test.py size --baseline 12% --mde 10% --daily-traffic 3000</code></td></tr>
+<tr><td><code>unit_econ.py</code></td><td>單位經濟：LTV、LTV/CAC、回收期，以及哪個假設一變就不健康</td><td><code>python3 scripts/unit_econ.py examples/unit_econ.csv</code></td></tr>
+<tr><td><code>estimate.py</code></td><td>工時三點估算：期望工時，以及 90% 信心下可以承諾的數字</td><td><code>python3 scripts/estimate.py examples/estimate.csv</code></td></tr>
+<tr><td><code>market_size.py</code></td><td>市場規模：bottom-up 算 TAM／SAM／SOM，回推達標需要多少滲透率</td><td><code>python3 scripts/market_size.py examples/market_size.csv</code></td></tr>
+<tr><td><code>prd_check.py</code></td><td>PRD 結構檢查：缺不缺非目標、驗收條件、指標；找出模糊用語與沒填的空格</td><td><code>python3 scripts/prd_check.py examples/prd_sample.md</code></td></tr>
 <tr><td><code>dates.py</code></td><td>日期：核對文件裡的星期、加減工作天、排時程</td><td><code>python3 scripts/dates.py check 草稿.md</code></td></tr>
 </table>
 
 另外附三份可以直接填的 Excel：**RICE 排序表**、**風險登記表**、**UAT 測試案例表**。
 
-**clone 完就能試。** `examples/` 有三份範例資料，數字和指南裡的情境範例一致：
+**clone 完就能試。** `examples/` 有七份範例資料，數字和指南裡的情境範例一致。上表每一行範例指令都能直接執行，例如：
 
 ```bash
 python3 scripts/rice.py examples/rice.csv --capacity 4.5
@@ -214,7 +258,7 @@ python3 scripts/ab_test.py analyze examples/ab_test.csv
 
 - 腳本只用 Python 標準函式庫，每支都有 `--help`。CSV 欄名中英文都可以，加 `--json` 會輸出機器可讀的格式。
 - `dates.py` 沒有內建國定假日，因為假日不能用猜的。要跳過假日時，用 `--holidays` 和 `--makeup-workdays` 指定你自己的假日檔與補班日檔。
-- 腳本附 58 個自動化測試，執行：`python3 -m pytest scripts/tests`
+- 腳本附 172 個自動化測試，執行：`python3 -m pytest scripts/tests`
 - 要調整 Excel 表單，改 `scripts/build_templates.py` 後重新產生。這支需要 `openpyxl`。
 
 </details>
@@ -223,20 +267,23 @@ python3 scripts/ab_test.py analyze examples/ab_test.csv
 
 範例橫跨外送平台、電商、記帳 SaaS、線上課程、預約系統、健身 App 等產業，數字一律是示意或假設值。
 
-要更貼近你們團隊，改這兩個地方就好：
+要更貼近你們團隊，改這三個地方就好：
 
-1. **`SKILL.md` 最後的「情境與合規提醒」**：換成你們的產品、適用法規與對外審核流程。
+1. **`SKILL.md` 最後的「語言、情境與合規」**：換成你們的產品、適用法規與對外審核流程。
 2. **各指南的「情境範例」**：換成你們自己的產品情境，Claude 舉例時就會更貼近你們的狀況。
+3. **`modes/` 裡的四份模式說明**：審查的嚴重度標準、演練的難度、劇本的步驟，都可以照你們團隊的做法改。
 
 ## 品質驗證
 
-`evals/evals.json` 有 4 個貼近實務的 PM 情境，每個都附具體的評分項目，例如：
+`evals/evals.json` 有 8 個貼近實務的 PM 情境，涵蓋五種模式，每個都附具體的評分項目，例如：
 
 - 有沒有寫非目標
 - 驗收條件能不能測
 - 有沒有捏造數字
 - A/B 測試的 p 值算得對不對
 - 日期的星期對不對
+- 審查時有沒有引用原文、附上改法
+- 演練時有沒有一次只講一輪、有沒有真的給阻力
 
 改了 skill 之後拿這些情境重跑一次，就知道有沒有退步。
 

@@ -214,7 +214,7 @@ class WorkCalendar:
     def coverage_notes(self, *days: date) -> list[str]:
         notes = []
         if not self.has_holiday_file:
-            notes.append("未提供假日檔：只跳過週六、週日，沒有扣除國定假日。請依行政院人事行政總處公布的辦公日曆表建立假日檔（--holidays）。")
+            notes.append("未提供假日檔：只跳過週六、週日，沒有扣除國定假日。請依當地政府公布的辦公日曆建立假日檔（--holidays）。")
         else:
             covered = {d.year for d in self.holidays} | {d.year for d in self.makeup}
             years = sorted({d.year for d in days})
@@ -257,9 +257,15 @@ def render_weekday(r: dict) -> str:
 # check
 # ---------------------------------------------------------------------------
 
+# 英文星期：Mon／Monday、Tue／Tues／Tuesday…，首字大寫，可帶句點
+_EN_DAY = (r"(?:Mon(?:day)?|Tue(?:s(?:day)?)?|Wed(?:nesday)?|Thu(?:r(?:s(?:day)?)?)?"
+           r"|Fri(?:day)?|Sat(?:urday)?|Sun(?:day)?)")
+EN_DAY_TO_INDEX = {"mon": 0, "tue": 1, "wed": 2, "thu": 3, "fri": 4, "sat": 5, "sun": 6}
 _LABEL = (
     r"(?P<label>\s*(?:[（(]\s*(?:週|周|星期|禮拜)?\s*(?P<l1>[一二三四五六日天])\s*[）)]"
-    r"|(?:週|周|星期|禮拜)\s*(?P<l2>[一二三四五六日天])))"
+    r"|(?:週|周|星期|禮拜)\s*(?P<l2>[一二三四五六日天])"
+    r"|[（(]\s*(?P<l3>" + _EN_DAY + r")\.?\s*[）)]"
+    r"|,?\s*(?P<l4>" + _EN_DAY + r")\b(?![a-z])))"
 )
 # 日期本體：完整日期（含年份）、或月/日、月-日、M月D日
 _DATE = (
@@ -304,8 +310,10 @@ def cmd_check(args: argparse.Namespace) -> dict:
             text = line[m.start():m.end()].strip()
             d, err, dash_short = _resolve(m, today)
             label_ch = m.group("l1") or m.group("l2")
-            if label_ch:
-                labeled = LABEL_CHAR_TO_INDEX[label_ch]
+            label_en = m.group("l3") or m.group("l4")
+            if label_ch or label_en:
+                labeled = (LABEL_CHAR_TO_INDEX[label_ch] if label_ch
+                           else EN_DAY_TO_INDEX[label_en[:3].lower()])
                 entry = {"line": no, "text": text, "date": d.isoformat() if d else None,
                          "labeled": WEEKDAY_ZH[labeled],
                          "actual": zh_weekday(d) if d else None}
@@ -611,7 +619,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     pc = sub.add_parser("check", help="檢查文件中「日期（星期）」的標註是否正確；有錯時 exit code 為 1",
                         description="掃描 Markdown／文字檔，找出 11/14（五）、11/14(五)、2026-11-17（週二）、"
-                                    "11-17（一）、11/14 週五、11/14（星期五）、11月14日（五）等寫法並核對真實星期。"
+                                    "11-17（一）、11/14 週五、11/14（星期五）、11月14日（五）、2026-11-17 (Tue)、11/17 (Tuesday) 等寫法並核對真實星期。"
                                     "另列出未標星期的日期（警告；不含「11-17」這種易與數字範圍混淆的寫法）。"
                                     "有任何標錯時 exit code = 1，全對為 0。" + YEAR_RULE_HELP)
     pc.add_argument("file", help="要檢查的 Markdown 或文字檔（UTF-8）")

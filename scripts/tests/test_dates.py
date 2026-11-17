@@ -118,6 +118,46 @@ class TestCheck(unittest.TestCase):
         finally:
             os.remove(path)
 
+    def test_english_weekday_labels(self):
+        # 英文回覆常寫成 2026-11-23 (Mon)；要能核對，寫錯也要抓得到
+        import tempfile
+        text = ("Kickoff 2026-11-23 (Mon)\n"        # 正確
+                "Review 2026-11-27 (Thu)\n"         # 實際是週五
+                "Due 2026-12-22, Tuesday\n"         # 正確，逗號加全名
+                "Ship 11/20 (Fri.)\n"               # 正確，縮寫帶句點
+                "Sync 2026-11-18 (Wednesday)\n"     # 正確，全名
+                "Demo 2026-11-19 (Tues)\n")         # 實際是週四
+        with tempfile.NamedTemporaryFile("w", suffix=".md", delete=False, encoding="utf-8") as f:
+            f.write(text)
+            path = f.name
+        try:
+            code, out, _ = run(["check", path, "--today", "2026-11-17", "--json"])
+            res = json.loads(out)
+            self.assertEqual(code, 1)
+            self.assertEqual(len(res["checked"]), 6)
+            self.assertEqual(res["errors"], 2)
+            wrong = sorted(c["line"] for c in res["checked"] if c["status"] != "OK")
+            self.assertEqual(wrong, [2, 6])
+            self.assertEqual(res["unlabeled"], [])
+        finally:
+            os.remove(path)
+
+    def test_english_word_after_date_is_not_a_label(self):
+        # 日期後面接的一般英文字（非星期）不可被當成星期標註
+        import tempfile
+        text = "Launch 2026-11-23 Monitoring starts\nFreeze 2026-11-24 Sunset the old flow\n"
+        with tempfile.NamedTemporaryFile("w", suffix=".md", delete=False, encoding="utf-8") as f:
+            f.write(text)
+            path = f.name
+        try:
+            code, out, _ = run(["check", path, "--today", "2026-11-17", "--json"])
+            res = json.loads(out)
+            self.assertEqual(code, 0)
+            self.assertEqual(res["checked"], [])
+            self.assertEqual(len(res["unlabeled"]), 2)
+        finally:
+            os.remove(path)
+
     def test_missing_file(self):
         code, _, err = run(["check", os.path.join(FIX, "nope.md")])
         self.assertEqual(code, 2)

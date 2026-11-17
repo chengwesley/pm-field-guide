@@ -2,25 +2,25 @@
 
 # PM Field Guide
 
-**A product management handbook that flips to the right page by itself**
+**More than a handbook: a PM agent that's on your side**
 
 50 core software PM competencies, packaged as one [Claude Code](https://claude.com/claude-code) skill.<br>
-Describe your situation. It picks the right methods, asks what's missing, and hands you something you can take straight into the meeting.
+It writes with you, reviews your drafts, rehearses hard conversations, walks you through whole workflows, runs the numbers with scripts, and remembers your product.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Guides](https://img.shields.io/badge/guides-50-green)
-![Tools](https://img.shields.io/badge/tools-4_scripts_%2B_3_templates-yellow)
+![Tools](https://img.shields.io/badge/tools-8_scripts_%2B_3_templates-yellow)
 ![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-skill-orange)
 
-**50 guides · 4 calculation scripts · 3 Excel templates**
+**50 guides · 5 working modes · 8 calculation scripts · 3 Excel templates**
 
 [繁體中文](README.md) ｜ **English**
 
-[Why](#why-it-exists) · [Example](#see-it-in-action) · [Situations](#where-are-you-right-now) · [Install](#install) · [Tools](#bundled-tools-if-it-can-be-calculated-dont-guess) · [Customize](#make-it-your-teams-own)
+[Why](#why-it-exists) · [Example](#see-it-in-action) · [Modes](#five-working-modes) · [Situations](#where-are-you-right-now) · [Install](#install) · [Tools](#bundled-tools-if-it-can-be-calculated-dont-guess) · [Customize](#make-it-your-teams-own)
 
 </div>
 
-> **Language note:** the 50 guides are written in Traditional Chinese. If you ask in English, Claude usually answers in English. The skill's own rules default to Traditional Chinese; you can change that in `SKILL.md`.
+> **Language note:** the skill answers in the language you write in, English included. The 50 guides and the script output are written in Traditional Chinese; Claude translates templates, table headers, and conclusions into your language as it works.
 
 ---
 
@@ -55,6 +55,46 @@ Claude reads three guides in order: Requirement Analysis, Prioritization, and Bu
 3. **Scores and ranks it.** It runs RICE against the other candidates, sizing impact in B2B units (number of accounts, contract value).
 4. **Drafts your reply to sales.** It neither says yes nor no on the spot.
 5. **Lists next steps.** Every item has an owner and a date.
+
+## Five working modes
+
+One body of knowledge, used differently depending on what you need right now. No commands to learn: talk normally and it switches to the right mode.
+
+<table width="100%">
+<tr><th width="120">Mode</th><th width="300">You say</th><th width="416">What it does</th></tr>
+<tr><td><b>Produce</b></td><td>"Write a PRD", "How do I prioritize these?", "Help me prep for tomorrow's 1:1"</td><td>Asks for the key facts that are missing, delivers a document you can use as is, and ends with what you need to confirm and the next steps</td></tr>
+<tr><td><b>Review</b></td><td>"Look over this PRD", "Check this before I send it"</td><td>Doesn't rewrite your document. It runs the scripts for structural gaps, checks each quality criterion, and sorts issues into must-fix, suggested, and ignorable, each with a rewrite you can paste in</td></tr>
+<tr><td><b>Rehearse</b></td><td>"Practice with me", "Play my boss"</td><td>Plays your manager, engineering lead, or sales rep, one line at a time. It pushes back, applies pressure, and says the thing you're dreading. Afterwards it gives feedback that quotes your own words</td></tr>
+<tr><td><b>Playbook</b></td><td>"I just took over this product", "Plan next quarter", "Take me from idea to launch"</td><td>Shows the whole step map first, completes one step at a time, then asks whether to move on</td></tr>
+<tr><td><b>Calculate</b></td><td>"What's our LTV?", "Is this result significant?", "How big is the market?"</td><td>Uses scripts instead of mental math, then tells you what the number means and which assumption to verify first</td></tr>
+</table>
+
+**It remembers your product.** After the first session it offers to save what you confirmed to `.pm/product.md`. From then on it reads that file and your decision log first, so it stops asking the same questions, and it warns you when a new request conflicts with an earlier decision. The files live in your own folder and you control what goes in them.
+
+<details>
+<summary><b>10 end-to-end playbooks (click to expand)</b></summary>
+
+<br>
+
+<table width="100%">
+<tr><th width="60">#</th><th width="320">Playbook</th><th width="456">When to use it</th></tr>
+<tr><td>P1</td><td>A new PM's first 30 days</td><td>New job, new product line, or inheriting someone else's product</td></tr>
+<tr><td>P2</td><td>Quarterly planning</td><td>Deciding what to build next quarter and how to allocate people</td></tr>
+<tr><td>P3</td><td>New feature, idea to launch</td><td>Taking a fuzzy request all the way to release</td></tr>
+<tr><td>P4</td><td>Squeeze-in requests</td><td>Sales, a big client, or your boss wants something added now</td></tr>
+<tr><td>P5</td><td>Dates don't match</td><td>Leadership's date and engineering's estimate are far apart</td></tr>
+<tr><td>P6</td><td>Launch readiness</td><td>The feature is nearly done and needs to ship safely</td></tr>
+<tr><td>P7</td><td>Disappointing results after launch</td><td>The numbers look bad and you need causes and a next move</td></tr>
+<tr><td>P8</td><td>Post-incident review</td><td>After a bad release, a support spike, or a missed external commitment</td></tr>
+<tr><td>P9</td><td>Pricing or plan changes</td><td>Changing prices, plan structure, or adding paid features</td></tr>
+<tr><td>P10</td><td>New market or product line</td><td>Leadership asks "is this worth doing?"</td></tr>
+</table>
+
+Each playbook lists every step, what each step produces, and a minimum version for when time is short. See [`modes/playbooks.md`](modes/playbooks.md).
+
+</details>
+
+Full rules for each mode: [Product context memory](modes/context.md) · [Review](modes/review.md) · [Rehearsal](modes/rehearsal.md) · [Playbooks](modes/playbooks.md)
 
 ## Where are you right now?
 
@@ -188,12 +228,16 @@ That's it. There are no commands to learn. Describe your situation in Claude Cod
 <tr><td><code>rice.py</code></td><td>Prioritization: RICE scores, capacity line, sensitivity analysis (does the ranking change if an estimate is off by 2×?)</td><td><code>python3 scripts/rice.py examples/rice.csv --capacity 4.5</code></td></tr>
 <tr><td><code>funnel.py</code></td><td>Funnels: step conversion, biggest drop-off, significance vs. the previous period</td><td><code>python3 scripts/funnel.py examples/funnel.csv</code></td></tr>
 <tr><td><code>ab_test.py</code></td><td>A/B tests: required sample size and duration; significance, confidence intervals, and sample ratio mismatch</td><td><code>python3 scripts/ab_test.py size --baseline 12% --mde 10% --daily-traffic 3000</code></td></tr>
+<tr><td><code>unit_econ.py</code></td><td>Unit economics: LTV, LTV/CAC, payback period, and which assumption breaks the model when it moves</td><td><code>python3 scripts/unit_econ.py examples/unit_econ.csv</code></td></tr>
+<tr><td><code>estimate.py</code></td><td>Three-point estimates: expected effort, plus the number you can commit to at 90% confidence</td><td><code>python3 scripts/estimate.py examples/estimate.csv</code></td></tr>
+<tr><td><code>market_size.py</code></td><td>Market sizing: bottom-up TAM/SAM/SOM, and the penetration you'd need to hit a revenue target</td><td><code>python3 scripts/market_size.py examples/market_size.csv</code></td></tr>
+<tr><td><code>prd_check.py</code></td><td>PRD structure check: missing non-goals, acceptance criteria, or metrics; flags vague wording and unfilled blanks</td><td><code>python3 scripts/prd_check.py examples/prd_sample.md</code></td></tr>
 <tr><td><code>dates.py</code></td><td>Dates: checks weekdays in a document, adds or subtracts business days, builds schedules</td><td><code>python3 scripts/dates.py check draft.md</code></td></tr>
 </table>
 
 It also ships three fill-in Excel templates: a **RICE scoring sheet**, a **risk register**, and a **UAT test case sheet**.
 
-**Try it right after cloning.** `examples/` has three sample inputs whose numbers match the worked examples in the guides:
+**Try it right after cloning.** `examples/` has seven sample inputs whose numbers match the worked examples in the guides. Every example command in the table above runs as is. For instance:
 
 ```bash
 python3 scripts/rice.py examples/rice.csv --capacity 4.5
@@ -216,7 +260,7 @@ The third command prints the result below (script output is in Traditional Chine
 
 - The scripts use only the Python standard library, and each one has `--help`. CSV headers can be in English or Chinese. Add `--json` for machine-readable output.
 - `dates.py` has no built-in public holidays, because holidays shouldn't be guessed. To skip them, supply your own holiday and make-up workday files with `--holidays` and `--makeup-workdays`.
-- The scripts ship with 58 automated tests: `python3 -m pytest scripts/tests`
+- The scripts ship with 172 automated tests: `python3 -m pytest scripts/tests`
 - To change the Excel templates, edit `scripts/build_templates.py` and regenerate. That script needs `openpyxl`.
 
 </details>
@@ -225,20 +269,23 @@ The third command prints the result below (script output is in Traditional Chine
 
 The examples cover food delivery, e-commerce, accounting SaaS, online courses, booking systems, fitness apps, and more. Every number in them is illustrative or explicitly marked as an assumption.
 
-To tailor it to your team, change two things:
+To tailor it to your team, change three things:
 
-1. **The "Context & compliance reminders" section at the end of `SKILL.md`:** swap in your products, applicable regulations, and external review process.
+1. **The "Language, context & compliance" section at the end of `SKILL.md`:** swap in your products, applicable regulations, and external review process.
 2. **The worked example in each guide:** replace it with your own product context, so Claude's examples match your reality.
+3. **The four mode files in `modes/`:** the severity bar for reviews, rehearsal difficulty, and playbook steps can all be changed to match how your team works.
 
 ## Quality checks
 
-`evals/evals.json` contains 4 realistic PM scenarios, each with concrete grading criteria, for example:
+`evals/evals.json` contains 8 realistic PM scenarios covering all five modes, each with concrete grading criteria, for example:
 
 - Are non-goals stated?
 - Are acceptance criteria testable?
 - Were any numbers made up?
 - Is the A/B test p-value correct?
 - Are the weekdays right?
+- Does a review quote the original text and offer a rewrite?
+- In a rehearsal, does it speak one turn at a time and actually push back?
 
 After you change the skill, rerun these scenarios to catch regressions.
 
