@@ -36,7 +36,7 @@ You've probably been here:
 Ask a general AI and you get a well-formatted, generic answer that doesn't quite fit your case. PM Field Guide works differently:
 
 <table width="100%">
-<tr><th width="380">A typical AI answer</th><th width="380">With PM Field Guide</th></tr>
+<tr><th width="418">A typical AI answer</th><th width="418">With PM Field Guide</th></tr>
 <tr><td>Starts writing right away</td><td><b>Asks first</b> about what's missing: who wants it, what for, where's the evidence</td></tr>
 <tr><td>Fills in plausible-looking numbers</td><td><b>Never invents numbers</b>: unknowns stay as <code>____</code> or are marked as assumptions</td></tr>
 <tr><td>Lists frameworks for you to choose from</td><td><b>Gives a decision</b>: what to do, what not to do, and why</td></tr>
@@ -63,7 +63,7 @@ Find the line that sounds like you. The guides next to it are what Claude will u
 ### 🧭 Direction isn't set yet
 
 <table width="100%">
-<tr><th width="240">You might say</th><th width="190">Guides used</th><th width="330">You get</th></tr>
+<tr><th width="260">You might say</th><th width="210">Guides used</th><th width="366">You get</th></tr>
 <tr><td>"My boss wants to know how big this market is and whether we should enter"</td><td><a href="references/01-market-research.md">01 Market Research</a></td><td>TAM/SAM/SOM estimate, sensitivity analysis, recommendation, and assumptions to validate</td></tr>
 <tr><td>"How are we actually different from competitors?"</td><td><a href="references/02-competitive-analysis.md">02 Competitive Analysis</a></td><td>Comparison matrix, differentiation opportunities, head-on fights to avoid</td></tr>
 <tr><td>"How should we price this? How do we make money?"</td><td><a href="references/03-business-model.md">03 Business Model</a></td><td>Revenue structure, unit economics (LTV/CAC), the most fragile assumption</td></tr>
@@ -74,7 +74,7 @@ Find the line that sounds like you. The guides next to it are what Claude will u
 ### 📥 Requests keep pouring in
 
 <table width="100%">
-<tr><th width="240">You might say</th><th width="190">Guides used</th><th width="330">You get</th></tr>
+<tr><th width="260">You might say</th><th width="210">Guides used</th><th width="366">You get</th></tr>
 <tr><td>"Sales / a big client / my boss wants this squeezed in. Should we?"</td><td><a href="references/11-requirement-analysis.md">11 Requirement Analysis</a><br>→ <a href="references/08-requirement-prioritization.md">08 Prioritization</a><br>→ <a href="references/41-business-communication.md">41 Business Communication</a></td><td>The real problem, a RICE ranking, a reply script for the requester</td></tr>
 <tr><td>"Too many requests, not enough capacity"</td><td><a href="references/08-requirement-prioritization.md">08 Prioritization</a></td><td>RICE/ICE/MoSCoW ranking with a capacity line</td></tr>
 <tr><td>"My manager wants a dashboard, but I don't know what they want to see"</td><td><a href="references/10-stakeholder-interview.md">10 Stakeholder Interviews</a></td><td>Stakeholder map, interview guide, alignment notes (including open disagreements)</td></tr>
@@ -84,7 +84,7 @@ Find the line that sounds like you. The guides next to it are what Claude will u
 ### ✍️ Turning ideas into specs
 
 <table width="100%">
-<tr><th width="240">You might say</th><th width="190">Guides used</th><th width="330">You get</th></tr>
+<tr><th width="260">You might say</th><th width="210">Guides used</th><th width="366">You get</th></tr>
 <tr><td>"Write a PRD. I'm reviewing it with engineering next week"</td><td><a href="references/21-prd-writing.md">21 PRD</a><br>→ <a href="references/23-acceptance-criteria.md">23 Acceptance Criteria</a><br>→ <a href="references/24-system-logic.md">24 System Logic</a></td><td>PRD with non-goals, scope, and numbered requirements; testable acceptance criteria; a state machine</td></tr>
 <tr><td>"This epic is too big. How do I split it?"</td><td><a href="references/22-user-story.md">22 User Stories</a></td><td>Sliced stories, each independently shippable</td></tr>
 <tr><td>"We need to integrate a third-party API"</td><td><a href="references/25-api-integration.md">25 API &amp; System Integration</a><br>→ <a href="references/26-data-structure.md">26 Data Structure</a></td><td>Data flows, errors and retries, idempotency, reconciliation rules</td></tr>
@@ -94,7 +94,7 @@ Find the line that sounds like you. The guides next to it are what Claude will u
 ### ⏱️ Stuck on schedule or resources
 
 <table width="100%">
-<tr><th width="240">You might say</th><th width="190">Guides used</th><th width="330">You get</th></tr>
+<tr><th width="260">You might say</th><th width="210">Guides used</th><th width="366">You get</th></tr>
 <tr><td>"My boss's date and engineering's estimate don't match"</td><td><a href="references/48-managing-up.md">48 Managing Up</a><br>→ <a href="references/38-conflict-resolution.md">38 Conflict Resolution</a><br>→ <a href="references/27-schedule-management.md">27 Schedule Management</a></td><td>Scope/timeline options with their costs, and an opening line for tomorrow's 1:1</td></tr>
 <tr><td>"Two business units are fighting over the same engineers"</td><td><a href="references/38-conflict-resolution.md">38 Conflict Resolution</a><br>→ <a href="references/28-resource-allocation.md">28 Resource Allocation</a></td><td>Decision framework, trade-off options, conditions for revisiting</td></tr>
 <tr><td>"Something feels off with this project, but I can't say what"</td><td><a href="references/30-risk-management.md">30 Risk Management</a><br>→ <a href="references/29-progress-tracking.md">29 Progress Tracking</a></td><td>Risk register (probability × impact, early signals), status report format</td></tr>
@@ -103,7 +103,7 @@ Find the line that sounds like you. The guides next to it are what Claude will u
 ### 🚀 Getting ready to launch
 
 <table width="100%">
-<tr><th width="240">You might say</th><th width="190">Guides used</th><th width="330">You get</th></tr>
+<tr><th width="260">You might say</th><th width="210">Guides used</th><th width="366">You get</th></tr>
 <tr><td>"We launch next month. What do I need to prepare?"</td><td><a href="references/31-uat.md">31 UAT</a><br>→ <a href="references/44-qa-testing.md">44 QA Testing</a><br>→ <a href="references/32-gtm-launch.md">32 GTM</a></td><td>UAT plan, defect severity levels, launch checklist with rollback criteria</td></tr>
 <tr><td>"How should support answer questions about the new feature?"</td><td><a href="references/45-customer-support-communication.md">45 Customer Support</a></td><td>Launch support kit, scripts, monthly support feedback report</td></tr>
 <tr><td>"Marketing says B won and wants a full rollout"</td><td><a href="references/19-ab-testing.md">19 A/B Testing</a><br>→ <a href="references/20-data-analysis.md">20 Data Analysis</a></td><td>Significance and SRM computed by a script, and a clear call on whether to roll out</td></tr>
@@ -112,7 +112,7 @@ Find the line that sounds like you. The guides next to it are what Claude will u
 ### 📉 Post-launch numbers disappoint
 
 <table width="100%">
-<tr><th width="240">You might say</th><th width="190">Guides used</th><th width="330">You get</th></tr>
+<tr><th width="260">You might say</th><th width="210">Guides used</th><th width="366">You get</th></tr>
 <tr><td>"Nobody is using the new feature"</td><td><a href="references/34-performance-tracking.md">34 Performance Tracking</a><br>→ <a href="references/13-funnel-analysis.md">13 Funnel Analysis</a><br>→ <a href="references/35-product-iteration.md">35 Product Iteration</a></td><td>Results readout, biggest drop-off point, what to do next round</td></tr>
 <tr><td>"Revenue or subscriptions dropped. My boss wants to know why"</td><td><a href="references/20-data-analysis.md">20 Data Analysis</a></td><td>Breakdown path, confounders to rule out, confidence level of the conclusion</td></tr>
 <tr><td>"Users keep getting stuck on the same step"</td><td><a href="references/33-ux-optimization.md">33 UX Optimization</a><br>→ <a href="references/18-usability-testing.md">18 Usability Testing</a></td><td>Friction list, optimization plan for this round, usability test design</td></tr>
@@ -121,7 +121,7 @@ Find the line that sounds like you. The guides next to it are what Claude will u
 ### 🤝 The blocker is people, not tasks
 
 <table width="100%">
-<tr><th width="240">You might say</th><th width="190">Guides used</th><th width="330">You get</th></tr>
+<tr><th width="260">You might say</th><th width="210">Guides used</th><th width="366">You get</th></tr>
 <tr><td>"I need finance to help, but I have no authority over them"</td><td><a href="references/36-cross-department-communication.md">36 Cross-team Communication</a></td><td>Request template, follow-up log, scripts</td></tr>
 <tr><td>"Engineering says my requirements are unclear"</td><td><a href="references/42-rd-communication.md">42 Working with Engineering</a></td><td>Structure for walking through requirements, how to discuss estimates and trade-offs</td></tr>
 <tr><td>"I need to convince leadership to invest"</td><td><a href="references/47-proposal-persuasion.md">47 Proposals &amp; Persuasion</a><br>→ <a href="references/40-presentation-making.md">40 Presentations</a></td><td>Proposal structure, anticipated objections and responses</td></tr>
@@ -131,7 +131,7 @@ Find the line that sounds like you. The guides next to it are what Claude will u
 ### 😮‍💨 You're running on empty
 
 <table width="100%">
-<tr><th width="240">You might say</th><th width="190">Guides used</th><th width="330">You get</th></tr>
+<tr><th width="260">You might say</th><th width="210">Guides used</th><th width="366">You get</th></tr>
 <tr><td>"My proposal got rejected, and sales has been chasing me all week"</td><td><a href="references/50-emotion-management.md">50 Emotion Management</a></td><td>In-the-moment log, 1:1 prep card for your manager, scripts</td></tr>
 <tr><td>"Which parts of my job can I hand to AI?"</td><td><a href="references/49-ai-tools.md">49 AI Tools</a></td><td>What to delegate and what not to, prompt templates, data-safety boundaries</td></tr>
 </table>
@@ -184,7 +184,7 @@ That's it. There are no commands to learn. Describe your situation in Claude Cod
 ## Bundled tools: if it can be calculated, don't guess
 
 <table width="100%">
-<tr><th width="110">Tool</th><th width="330">What it solves</th><th width="320">Example</th></tr>
+<tr><th width="120">Tool</th><th width="350">What it solves</th><th width="366">Example</th></tr>
 <tr><td><code>rice.py</code></td><td>Prioritization: RICE scores, capacity line, sensitivity analysis (does the ranking change if an estimate is off by 2×?)</td><td><code>python3 scripts/rice.py backlog.csv --capacity 4</code></td></tr>
 <tr><td><code>funnel.py</code></td><td>Funnels: step conversion, biggest drop-off, significance vs. the previous period</td><td><code>python3 scripts/funnel.py funnel.csv</code></td></tr>
 <tr><td><code>ab_test.py</code></td><td>A/B tests: required sample size and duration; significance, confidence intervals, and sample ratio mismatch</td><td><code>python3 scripts/ab_test.py size --baseline 12% --mde 10% --daily-traffic 3000</code></td></tr>

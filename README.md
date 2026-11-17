@@ -34,7 +34,7 @@
 直接問 AI，通常會拿到一份格式漂亮、但套到你身上不太對的通用答案。PM Field Guide 的做法不一樣：
 
 <table width="100%">
-<tr><th width="380">一般 AI 回答</th><th width="380">用 PM Field Guide</th></tr>
+<tr><th width="418">一般 AI 回答</th><th width="418">用 PM Field Guide</th></tr>
 <tr><td>直接開始寫</td><td><b>先追問</b>缺的關鍵資訊：誰要、拿去做什麼、證據在哪</td></tr>
 <tr><td>數字自己補，看起來很合理</td><td><b>不編數字</b>：沒給的留 <code>____</code> 或標「假設值」</td></tr>
 <tr><td>列一堆框架讓你自己選</td><td><b>給結論</b>：要做什麼、不做什麼、依據是什麼</td></tr>
@@ -61,7 +61,7 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 ### 🧭 方向還沒定
 
 <table width="100%">
-<tr><th width="240">你可能會說</th><th width="190">用到的指南</th><th width="330">你會拿到</th></tr>
+<tr><th width="260">你可能會說</th><th width="210">用到的指南</th><th width="366">你會拿到</th></tr>
 <tr><td>「老闆問這個市場有多大、值不值得進」</td><td><a href="references/01-market-research.md">01 市場調查</a></td><td>TAM／SAM／SOM 推估、敏感度分析、建議與待驗證的假設</td></tr>
 <tr><td>「我們跟對手到底差在哪？」</td><td><a href="references/02-competitive-analysis.md">02 競品分析</a></td><td>比較矩陣、差異化機會、要避開的正面對決</td></tr>
 <tr><td>「方案要怎麼定價、怎麼賺錢？」</td><td><a href="references/03-business-model.md">03 商業模式</a></td><td>收入結構、單位經濟（LTV／CAC）、最脆弱的假設</td></tr>
@@ -72,7 +72,7 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 ### 📥 需求一直湧進來
 
 <table width="100%">
-<tr><th width="240">你可能會說</th><th width="190">用到的指南</th><th width="330">你會拿到</th></tr>
+<tr><th width="260">你可能會說</th><th width="210">用到的指南</th><th width="366">你會拿到</th></tr>
 <tr><td>「業務／大客戶／老闆要插單，要不要做？」</td><td><a href="references/11-requirement-analysis.md">11 需求分析</a><br>→ <a href="references/08-requirement-prioritization.md">08 需求排序</a><br>→ <a href="references/41-business-communication.md">41 Business 溝通</a></td><td>真正的問題、RICE 排序、給需求方的回覆話術</td></tr>
 <tr><td>「需求太多，排不完」</td><td><a href="references/08-requirement-prioritization.md">08 需求排序</a></td><td>RICE／ICE／MoSCoW 排序表，加上產能線</td></tr>
 <tr><td>「主管說要做一個儀表板，但我不知道他要看什麼」</td><td><a href="references/10-stakeholder-interview.md">10 利害關係人訪談</a></td><td>利害關係人盤點、訪談題綱、對齊紀錄（含分歧與待決事項）</td></tr>
@@ -82,7 +82,7 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 ### ✍️ 要把想法變成規格
 
 <table width="100%">
-<tr><th width="240">你可能會說</th><th width="190">用到的指南</th><th width="330">你會拿到</th></tr>
+<tr><th width="260">你可能會說</th><th width="210">用到的指南</th><th width="366">你會拿到</th></tr>
 <tr><td>「幫我寫 PRD，下週要跟 RD 對」</td><td><a href="references/21-prd-writing.md">21 PRD</a><br>→ <a href="references/23-acceptance-criteria.md">23 驗收條件</a><br>→ <a href="references/24-system-logic.md">24 系統邏輯</a></td><td>PRD（含非目標、範圍、編號需求）、可測的驗收條件、狀態機</td></tr>
 <tr><td>「這個 Epic 太大，要怎麼拆？」</td><td><a href="references/22-user-story.md">22 User Story</a></td><td>切片後的故事，每一則都能獨立交付</td></tr>
 <tr><td>「要串第三方 API」</td><td><a href="references/25-api-integration.md">25 API 與系統整合</a><br>→ <a href="references/26-data-structure.md">26 資料結構</a></td><td>資料流、錯誤與重試、冪等、對帳規則</td></tr>
@@ -92,7 +92,7 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 ### ⏱️ 時程或資源卡住了
 
 <table width="100%">
-<tr><th width="240">你可能會說</th><th width="190">用到的指南</th><th width="330">你會拿到</th></tr>
+<tr><th width="260">你可能會說</th><th width="210">用到的指南</th><th width="366">你會拿到</th></tr>
 <tr><td>「老闆要的日期和 RD 估的對不上」</td><td><a href="references/48-managing-up.md">48 向上管理</a><br>→ <a href="references/38-conflict-resolution.md">38 衝突協調</a><br>→ <a href="references/27-schedule-management.md">27 時程管理</a></td><td>範圍／時程選項與各自代價、明天一對一的開場白</td></tr>
 <tr><td>「兩個 BU 搶同一批 RD」</td><td><a href="references/38-conflict-resolution.md">38 衝突協調</a><br>→ <a href="references/28-resource-allocation.md">28 資源調度</a></td><td>決策框架、取捨方案、恢復條件</td></tr>
 <tr><td>「感覺專案會出事，但說不出哪裡」</td><td><a href="references/30-risk-management.md">30 風險管理</a><br>→ <a href="references/29-progress-tracking.md">29 進度追蹤</a></td><td>風險登記表（機率×衝擊、早期指標）、週報格式</td></tr>
@@ -101,7 +101,7 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 ### 🚀 準備上線
 
 <table width="100%">
-<tr><th width="240">你可能會說</th><th width="190">用到的指南</th><th width="330">你會拿到</th></tr>
+<tr><th width="260">你可能會說</th><th width="210">用到的指南</th><th width="366">你會拿到</th></tr>
 <tr><td>「下個月要上線，該準備什麼？」</td><td><a href="references/31-uat.md">31 UAT</a><br>→ <a href="references/44-qa-testing.md">44 QA 測試</a><br>→ <a href="references/32-gtm-launch.md">32 GTM</a></td><td>UAT 計畫、缺陷分級、上線檢查表與回滾條件</td></tr>
 <tr><td>「客服要怎麼回答新功能的問題？」</td><td><a href="references/45-customer-support-communication.md">45 客服溝通</a></td><td>上線客服素材包、話術、客服回饋月報</td></tr>
 <tr><td>「行銷說 B 組贏了，要全量」</td><td><a href="references/19-ab-testing.md">19 A/B 測試</a><br>→ <a href="references/20-data-analysis.md">20 數據分析</a></td><td>實際算出的顯著性、SRM 檢查，以及能不能全量的結論</td></tr>
@@ -110,7 +110,7 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 ### 📉 上線後數字不如預期
 
 <table width="100%">
-<tr><th width="240">你可能會說</th><th width="190">用到的指南</th><th width="330">你會拿到</th></tr>
+<tr><th width="260">你可能會說</th><th width="210">用到的指南</th><th width="366">你會拿到</th></tr>
 <tr><td>「新功能沒人用」</td><td><a href="references/34-performance-tracking.md">34 成效追蹤</a><br>→ <a href="references/13-funnel-analysis.md">13 漏斗分析</a><br>→ <a href="references/35-product-iteration.md">35 產品迭代</a></td><td>成效判讀、最大漏損點、下一輪要做什麼</td></tr>
 <tr><td>「營收／訂閱數掉了，老闆問為什麼」</td><td><a href="references/20-data-analysis.md">20 數據分析</a></td><td>拆解路徑、要排除的干擾因素、結論的信心程度</td></tr>
 <tr><td>「用戶一直卡在同一步」</td><td><a href="references/33-ux-optimization.md">33 UX 優化</a><br>→ <a href="references/18-usability-testing.md">18 易用性測試</a></td><td>摩擦點清單、本輪優化計畫、易用性測試設計</td></tr>
@@ -119,7 +119,7 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 ### 🤝 卡在人，不是卡在事
 
 <table width="100%">
-<tr><th width="240">你可能會說</th><th width="190">用到的指南</th><th width="330">你會拿到</th></tr>
+<tr><th width="260">你可能會說</th><th width="210">用到的指南</th><th width="366">你會拿到</th></tr>
 <tr><td>「需要財務配合，但我沒有指揮權」</td><td><a href="references/36-cross-department-communication.md">36 跨部門溝通</a></td><td>跨部門請託範本、追蹤紀錄、話術</td></tr>
 <tr><td>「RD 覺得我需求講不清楚」</td><td><a href="references/42-rd-communication.md">42 RD 溝通</a></td><td>需求講解結構、估時與取捨的談法</td></tr>
 <tr><td>「要說服老闆投資源」</td><td><a href="references/47-proposal-persuasion.md">47 提案說服</a><br>→ <a href="references/40-presentation-making.md">40 簡報製作</a></td><td>提案結構、預想的反對意見與回應</td></tr>
@@ -129,7 +129,7 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 ### 😮‍💨 你自己快撐不住了
 
 <table width="100%">
-<tr><th width="240">你可能會說</th><th width="190">用到的指南</th><th width="330">你會拿到</th></tr>
+<tr><th width="260">你可能會說</th><th width="210">用到的指南</th><th width="366">你會拿到</th></tr>
 <tr><td>「提案被否決，同一週又被業務追著跑」</td><td><a href="references/50-emotion-management.md">50 情緒管理</a></td><td>情緒當下紀錄、跟主管一對一的準備卡、話術</td></tr>
 <tr><td>「哪些工作可以交給 AI？」</td><td><a href="references/49-ai-tools.md">49 AI 工具</a></td><td>適合與不適合交給 AI 的工作、提示詞範本、資料安全界線</td></tr>
 </table>
@@ -182,7 +182,7 @@ git clone https://github.com/chengwesley/pm-field-guide.git ~/.claude/skills/pm-
 ## 內附工具：會算的，就不靠感覺
 
 <table width="100%">
-<tr><th width="110">工具</th><th width="330">解決什麼</th><th width="320">範例</th></tr>
+<tr><th width="120">工具</th><th width="350">解決什麼</th><th width="366">範例</th></tr>
 <tr><td><code>rice.py</code></td><td>需求排序：算 RICE 分數、畫產能線、做敏感度分析（估值差兩倍，結論會不會變？）</td><td><code>python3 scripts/rice.py 需求.csv --capacity 4</code></td></tr>
 <tr><td><code>funnel.py</code></td><td>漏斗：各步轉換率、最大漏損點、跟前期比較是否顯著</td><td><code>python3 scripts/funnel.py 漏斗.csv</code></td></tr>
 <tr><td><code>ab_test.py</code></td><td>A/B 測試：需要多少樣本、跑幾天；結果的顯著性、信賴區間、樣本比例失衡</td><td><code>python3 scripts/ab_test.py size --baseline 12% --mde 10% --daily-traffic 3000</code></td></tr>
