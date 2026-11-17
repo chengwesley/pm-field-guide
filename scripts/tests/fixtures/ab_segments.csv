@@ -1,0 +1,5 @@
+group,users,conversions,segment
+control,5000,500,桌機
+B,5000,560,桌機
+control,3000,240,手機
+B,3000,255,手機
