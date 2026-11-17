@@ -3,7 +3,7 @@ name: pm-field-guide
 description: 軟體產品經理（PM）50 項核心能力的實戰工具箱：從市場調查、競品分析、商業模式、產品策略、Roadmap、KPI、需求排序、用戶研究、漏斗分析、User Flow、Wireframe、A/B 測試、PRD、User Story、驗收條件、系統邏輯、時程與風險管理、UAT、GTM 上線規劃，到跨部門／RD／UIUX／QA／客服／跨國溝通、提案說服、向上管理、AI 工具與情緒管理。每一項都有「何時用、要先問什麼、怎麼做、產出模板、常見錯誤、情境範例」。當使用者說「幫我寫 PRD」「寫 User Story／驗收條件」「做競品分析」「排 Roadmap」「需求怎麼排優先」「設計 KPI」「做漏斗分析」「規劃 A/B 測試」「寫 GTM 計畫」「跟 RD 怎麼溝通」「怎麼說服老闆」「風險怎麼管」「UAT 怎麼辦」「PM 怎麼做 XXX」，或任何明確屬於 PM 日常工作的產出與判斷時使用，即使沒提到 skill 名稱。不適用：純商業模式顧問、簡報視覺設計、例行競品價格監測。
 ---
 
-# PM Field Guide — 軟體 PM 50 項能力工具箱
+# PM Field Guide（PM 生存指南）— 軟體 PM 50 項能力
 
 ## 這個 skill 做什麼
 
@@ -65,7 +65,7 @@ description: 軟體產品經理（PM）50 項核心能力的實戰工具箱：�
 
 ## 工具
 
-腳本在本檔同層的 `scripts/`，表單在 `assets/`。腳本只用 Python 標準函式庫，執行方式是 `python -X utf8 <本 skill 資料夾>/scripts/<腳本> ...`，每支都有 `--help`。CSV 欄名中英文都可以；加 `--json` 會輸出機器可讀的格式。
+腳本在本檔同層的 `scripts/`，表單在 `assets/`。腳本只用 Python 標準函式庫，執行方式是 `python3 -X utf8 <本 skill 資料夾>/scripts/<腳本> ...`（Windows 用 `python`），每支都有 `--help`。`examples/` 有三份範例輸入檔（`rice.csv`、`funnel.csv`、`ab_test.csv`），使用者想先看輸出長什麼樣子時可以拿來示範。CSV 欄名中英文都可以；加 `--json` 會輸出機器可讀的格式。
 
 | 工具 | 做什麼 | 常用指令 | 搭配指南 |
 |---|---|---|---|

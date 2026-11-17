@@ -185,13 +185,31 @@ That's it. There are no commands to learn. Describe your situation in Claude Cod
 
 <table width="100%">
 <tr><th width="120">Tool</th><th width="350">What it solves</th><th width="366">Example</th></tr>
-<tr><td><code>rice.py</code></td><td>Prioritization: RICE scores, capacity line, sensitivity analysis (does the ranking change if an estimate is off by 2×?)</td><td><code>python3 scripts/rice.py backlog.csv --capacity 4</code></td></tr>
-<tr><td><code>funnel.py</code></td><td>Funnels: step conversion, biggest drop-off, significance vs. the previous period</td><td><code>python3 scripts/funnel.py funnel.csv</code></td></tr>
+<tr><td><code>rice.py</code></td><td>Prioritization: RICE scores, capacity line, sensitivity analysis (does the ranking change if an estimate is off by 2×?)</td><td><code>python3 scripts/rice.py examples/rice.csv --capacity 4.5</code></td></tr>
+<tr><td><code>funnel.py</code></td><td>Funnels: step conversion, biggest drop-off, significance vs. the previous period</td><td><code>python3 scripts/funnel.py examples/funnel.csv</code></td></tr>
 <tr><td><code>ab_test.py</code></td><td>A/B tests: required sample size and duration; significance, confidence intervals, and sample ratio mismatch</td><td><code>python3 scripts/ab_test.py size --baseline 12% --mde 10% --daily-traffic 3000</code></td></tr>
 <tr><td><code>dates.py</code></td><td>Dates: checks weekdays in a document, adds or subtracts business days, builds schedules</td><td><code>python3 scripts/dates.py check draft.md</code></td></tr>
 </table>
 
 It also ships three fill-in Excel templates: a **RICE scoring sheet**, a **risk register**, and a **UAT test case sheet**.
+
+**Try it right after cloning.** `examples/` has three sample inputs whose numbers match the worked examples in the guides:
+
+```bash
+python3 scripts/rice.py examples/rice.csv --capacity 4.5
+python3 scripts/funnel.py examples/funnel.csv
+python3 scripts/ab_test.py analyze examples/ab_test.csv
+```
+
+The third command prints the result below (script output is in Traditional Chinese). Variant B looks like a winner, but the script first warns that the traffic split is off:
+
+```text
+卡方 = 28.508，自由度 = 1，p < 0.0001　⚠ 樣本比例失衡，先查分流再看結果   (sample ratio mismatch: check the split first)
+
+| 組別           | 訪客   | 轉換 | 轉換率 | 相對提升 | p 值   |
+| A 原版（對照） | 24,180 | 512  | 2.12%  | —        | —      |
+| B 新版         | 23,020 | 551  | 2.39%  | +13.0%   | 0.0433 |
+```
 
 <details>
 <summary>Tool details</summary>

@@ -183,13 +183,31 @@ git clone https://github.com/chengwesley/pm-field-guide.git ~/.claude/skills/pm-
 
 <table width="100%">
 <tr><th width="120">工具</th><th width="350">解決什麼</th><th width="366">範例</th></tr>
-<tr><td><code>rice.py</code></td><td>需求排序：算 RICE 分數、畫產能線、做敏感度分析（估值差兩倍，結論會不會變？）</td><td><code>python3 scripts/rice.py 需求.csv --capacity 4</code></td></tr>
-<tr><td><code>funnel.py</code></td><td>漏斗：各步轉換率、最大漏損點、跟前期比較是否顯著</td><td><code>python3 scripts/funnel.py 漏斗.csv</code></td></tr>
+<tr><td><code>rice.py</code></td><td>需求排序：算 RICE 分數、畫產能線、做敏感度分析（估值差兩倍，結論會不會變？）</td><td><code>python3 scripts/rice.py examples/rice.csv --capacity 4.5</code></td></tr>
+<tr><td><code>funnel.py</code></td><td>漏斗：各步轉換率、最大漏損點、跟前期比較是否顯著</td><td><code>python3 scripts/funnel.py examples/funnel.csv</code></td></tr>
 <tr><td><code>ab_test.py</code></td><td>A/B 測試：需要多少樣本、跑幾天；結果的顯著性、信賴區間、樣本比例失衡</td><td><code>python3 scripts/ab_test.py size --baseline 12% --mde 10% --daily-traffic 3000</code></td></tr>
 <tr><td><code>dates.py</code></td><td>日期：核對文件裡的星期、加減工作天、排時程</td><td><code>python3 scripts/dates.py check 草稿.md</code></td></tr>
 </table>
 
 另外附三份可以直接填的 Excel：**RICE 排序表**、**風險登記表**、**UAT 測試案例表**。
+
+**clone 完就能試。** `examples/` 有三份範例資料，數字和指南裡的情境範例一致：
+
+```bash
+python3 scripts/rice.py examples/rice.csv --capacity 4.5
+python3 scripts/funnel.py examples/funnel.csv
+python3 scripts/ab_test.py analyze examples/ab_test.csv
+```
+
+第三個指令會得到下面的結果。B 組看起來贏了，但腳本會先提醒你分流有問題：
+
+```text
+卡方 = 28.508，自由度 = 1，p < 0.0001　⚠ 樣本比例失衡，先查分流再看結果
+
+| 組別           | 訪客   | 轉換 | 轉換率 | 相對提升 | p 值   |
+| A 原版（對照） | 24,180 | 512  | 2.12%  | —        | —      |
+| B 新版         | 23,020 | 551  | 2.39%  | +13.0%   | 0.0433 |
+```
 
 <details>
 <summary>工具細節</summary>
