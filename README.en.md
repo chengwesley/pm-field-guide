@@ -60,7 +60,7 @@ Claude reads three guides in order: Requirement Analysis, Prioritization, and Bu
 
 Find the line that sounds like you. The guides next to it are what Claude will use. You don't need to remember any numbers; just describe the situation in your own words.
 
-### 🧭 Direction isn't set yet
+### Direction isn't set yet
 
 <table width="100%">
 <tr><th width="260">You might say</th><th width="210">Guides used</th><th width="366">You get</th></tr>
@@ -71,7 +71,7 @@ Find the line that sounds like you. The guides next to it are what Claude will u
 <tr><td>"What does success look like for this feature?"</td><td><a href="references/07-kpi-setting.md">07 KPI Setting</a></td><td>North Star metric, guardrail metrics, success thresholds set in advance</td></tr>
 </table>
 
-### 📥 Requests keep pouring in
+### Requests keep pouring in
 
 <table width="100%">
 <tr><th width="260">You might say</th><th width="210">Guides used</th><th width="366">You get</th></tr>
@@ -81,7 +81,7 @@ Find the line that sounds like you. The guides next to it are what Claude will u
 <tr><td>"I want to see how users actually behave"</td><td><a href="references/09-user-research.md">09 User Research</a><br>→ <a href="references/12-behavior-analysis.md">12 Behavior Analysis</a></td><td>Research plan, screener questions, event tracking plan</td></tr>
 </table>
 
-### ✍️ Turning ideas into specs
+### Turning ideas into specs
 
 <table width="100%">
 <tr><th width="260">You might say</th><th width="210">Guides used</th><th width="366">You get</th></tr>
@@ -91,7 +91,7 @@ Find the line that sounds like you. The guides next to it are what Claude will u
 <tr><td>"The flow is too complex to draw clearly"</td><td><a href="references/15-user-flow.md">15 User Flow</a><br>→ <a href="references/16-wireframe.md">16 Wireframe</a></td><td>Main path, branches, error paths, annotated wireframes</td></tr>
 </table>
 
-### ⏱️ Stuck on schedule or resources
+### Stuck on schedule or resources
 
 <table width="100%">
 <tr><th width="260">You might say</th><th width="210">Guides used</th><th width="366">You get</th></tr>
@@ -100,7 +100,7 @@ Find the line that sounds like you. The guides next to it are what Claude will u
 <tr><td>"Something feels off with this project, but I can't say what"</td><td><a href="references/30-risk-management.md">30 Risk Management</a><br>→ <a href="references/29-progress-tracking.md">29 Progress Tracking</a></td><td>Risk register (probability × impact, early signals), status report format</td></tr>
 </table>
 
-### 🚀 Getting ready to launch
+### Getting ready to launch
 
 <table width="100%">
 <tr><th width="260">You might say</th><th width="210">Guides used</th><th width="366">You get</th></tr>
@@ -109,7 +109,7 @@ Find the line that sounds like you. The guides next to it are what Claude will u
 <tr><td>"Marketing says B won and wants a full rollout"</td><td><a href="references/19-ab-testing.md">19 A/B Testing</a><br>→ <a href="references/20-data-analysis.md">20 Data Analysis</a></td><td>Significance and SRM computed by a script, and a clear call on whether to roll out</td></tr>
 </table>
 
-### 📉 Post-launch numbers disappoint
+### Post-launch numbers disappoint
 
 <table width="100%">
 <tr><th width="260">You might say</th><th width="210">Guides used</th><th width="366">You get</th></tr>
@@ -118,7 +118,7 @@ Find the line that sounds like you. The guides next to it are what Claude will u
 <tr><td>"Users keep getting stuck on the same step"</td><td><a href="references/33-ux-optimization.md">33 UX Optimization</a><br>→ <a href="references/18-usability-testing.md">18 Usability Testing</a></td><td>Friction list, optimization plan for this round, usability test design</td></tr>
 </table>
 
-### 🤝 The blocker is people, not tasks
+### The blocker is people, not tasks
 
 <table width="100%">
 <tr><th width="260">You might say</th><th width="210">Guides used</th><th width="366">You get</th></tr>
@@ -128,7 +128,7 @@ Find the line that sounds like you. The guides next to it are what Claude will u
 <tr><td>"I'm working with a team overseas"</td><td><a href="references/46-cross-border-communication.md">46 Cross-border Communication</a></td><td>Cross-time-zone request messages, working agreement, scripts</td></tr>
 </table>
 
-### 😮‍💨 You're running on empty
+### You're running on empty
 
 <table width="100%">
 <tr><th width="260">You might say</th><th width="210">Guides used</th><th width="366">You get</th></tr>
@@ -137,7 +137,7 @@ Find the line that sounds like you. The guides next to it are what Claude will u
 </table>
 
 <details>
-<summary><b>📚 All 50 competencies (click to expand)</b></summary>
+<summary><b>All 50 competencies (click to expand)</b></summary>
 
 <br>
 
@@ -226,7 +226,7 @@ After you change the skill, rerun these scenarios to catch regressions.
 
 ## License
 
-[MIT](LICENSE). Fork it and turn it into your team's version. If it helps, a star is appreciated ⭐
+[MIT](LICENSE). Fork it and turn it into your team's version. If it helps, a star is appreciated 
 
 <div align="center">
 <sub>Made by Wesley Cheng</sub>

@@ -58,7 +58,7 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 
 找到最像你的那一句，右邊就是 Claude 會用到的指南。你不用記編號，直接用自己的話講就好。
 
-### 🧭 方向還沒定
+### 方向還沒定
 
 <table width="100%">
 <tr><th width="260">你可能會說</th><th width="210">用到的指南</th><th width="366">你會拿到</th></tr>
@@ -69,7 +69,7 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 <tr><td>「這個功能成功的標準是什麼？」</td><td><a href="references/07-kpi-setting.md">07 KPI 設定</a></td><td>北極星指標、護欄指標、事前寫定的成功門檻</td></tr>
 </table>
 
-### 📥 需求一直湧進來
+### 需求一直湧進來
 
 <table width="100%">
 <tr><th width="260">你可能會說</th><th width="210">用到的指南</th><th width="366">你會拿到</th></tr>
@@ -79,7 +79,7 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 <tr><td>「想知道用戶實際怎麼用」</td><td><a href="references/09-user-research.md">09 用戶研究</a><br>→ <a href="references/12-behavior-analysis.md">12 行為分析</a></td><td>研究計畫、篩選題、事件埋點規劃</td></tr>
 </table>
 
-### ✍️ 要把想法變成規格
+### 要把想法變成規格
 
 <table width="100%">
 <tr><th width="260">你可能會說</th><th width="210">用到的指南</th><th width="366">你會拿到</th></tr>
@@ -89,7 +89,7 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 <tr><td>「流程好複雜，畫不清楚」</td><td><a href="references/15-user-flow.md">15 User Flow</a><br>→ <a href="references/16-wireframe.md">16 Wireframe</a></td><td>主流程、分支、異常路徑與線框標註</td></tr>
 </table>
 
-### ⏱️ 時程或資源卡住了
+### 時程或資源卡住了
 
 <table width="100%">
 <tr><th width="260">你可能會說</th><th width="210">用到的指南</th><th width="366">你會拿到</th></tr>
@@ -98,7 +98,7 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 <tr><td>「感覺專案會出事，但說不出哪裡」</td><td><a href="references/30-risk-management.md">30 風險管理</a><br>→ <a href="references/29-progress-tracking.md">29 進度追蹤</a></td><td>風險登記表（機率×衝擊、早期指標）、週報格式</td></tr>
 </table>
 
-### 🚀 準備上線
+### 準備上線
 
 <table width="100%">
 <tr><th width="260">你可能會說</th><th width="210">用到的指南</th><th width="366">你會拿到</th></tr>
@@ -107,7 +107,7 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 <tr><td>「行銷說 B 組贏了，要全量」</td><td><a href="references/19-ab-testing.md">19 A/B 測試</a><br>→ <a href="references/20-data-analysis.md">20 數據分析</a></td><td>實際算出的顯著性、SRM 檢查，以及能不能全量的結論</td></tr>
 </table>
 
-### 📉 上線後數字不如預期
+### 上線後數字不如預期
 
 <table width="100%">
 <tr><th width="260">你可能會說</th><th width="210">用到的指南</th><th width="366">你會拿到</th></tr>
@@ -116,7 +116,7 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 <tr><td>「用戶一直卡在同一步」</td><td><a href="references/33-ux-optimization.md">33 UX 優化</a><br>→ <a href="references/18-usability-testing.md">18 易用性測試</a></td><td>摩擦點清單、本輪優化計畫、易用性測試設計</td></tr>
 </table>
 
-### 🤝 卡在人，不是卡在事
+### 卡在人，不是卡在事
 
 <table width="100%">
 <tr><th width="260">你可能會說</th><th width="210">用到的指南</th><th width="366">你會拿到</th></tr>
@@ -126,7 +126,7 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 <tr><td>「要跟海外團隊合作」</td><td><a href="references/46-cross-border-communication.md">46 跨國溝通</a></td><td>跨時區請求訊息、雙方協作約定、話術</td></tr>
 </table>
 
-### 😮‍💨 你自己快撐不住了
+### 你自己快撐不住了
 
 <table width="100%">
 <tr><th width="260">你可能會說</th><th width="210">用到的指南</th><th width="366">你會拿到</th></tr>
@@ -135,7 +135,7 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 </table>
 
 <details>
-<summary><b>📚 50 項能力完整清單（點開）</b></summary>
+<summary><b>50 項能力完整清單（點開）</b></summary>
 
 <br>
 
@@ -224,7 +224,7 @@ git clone https://github.com/chengwesley/pm-field-guide.git ~/.claude/skills/pm-
 
 ## 授權
 
-[MIT](LICENSE)。歡迎 fork，改成你們團隊的版本；覺得有用也歡迎給顆星 ⭐
+[MIT](LICENSE)。歡迎 fork，改成你們團隊的版本；覺得有用也歡迎給顆星。
 
 <div align="center">
 <sub>由 Wesley Cheng 製作</sub>
