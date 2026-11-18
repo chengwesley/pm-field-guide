@@ -1,0 +1,12 @@
+{
+  "name": "pm-field-guide",
+  "owner": { "name": "Wesley Cheng" },
+  "description": "PM Field Guide: a PM agent skill for Claude Code",
+  "plugins": [
+    {
+      "name": "pm-field-guide",
+      "source": "./",
+      "description": "A PM agent for software product managers: 50 guides, 5 working modes (produce, review, rehearse, playbook, calculate), 8 calculation scripts, and a report template for every output."
+    }
+  ]
+}

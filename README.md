@@ -211,15 +211,34 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 
 ## 安裝
 
-只要一行：
+**方法一：用 plugin 安裝（建議）。** 在 Claude Code 裡輸入這兩行：
+
+```
+/plugin marketplace add chengwesley/pm-field-guide
+/plugin install pm-field-guide@pm-field-guide
+```
+
+第一行把這個 repo 加成來源，第二行安裝。之後要更新，輸入 `/plugin marketplace update pm-field-guide`。
+
+想在終端機裡裝也可以，兩行指令效果相同：
+
+```bash
+claude plugin marketplace add chengwesley/pm-field-guide
+```
+
+```bash
+claude plugin install pm-field-guide@pm-field-guide
+```
+
+**方法二：用 git clone。** 想直接改裡面的檔案、做成你們團隊的版本時用這個：
 
 ```bash
 git clone https://github.com/chengwesley/pm-field-guide.git ~/.claude/skills/pm-field-guide
 ```
 
-裝好就能用，不需要下任何指令。在 Claude Code 裡用平常講話的方式描述你的狀況，它會自己判斷要用哪幾份指南。
+只想在某個專案裡用，就改放到該專案的 `.claude/skills/pm-field-guide`。更新時在那個資料夾執行 `git pull`。
 
-> 只想在某個專案裡用？改放到該專案的 `.claude/skills/pm-field-guide`。
+兩種方法擇一就好。裝好就能用，不需要再下任何指令：在 Claude Code 裡用平常講話的方式描述你的狀況，它會自己判斷要用哪種模式、哪幾份指南。想手動叫出來時，輸入 `/pm-field-guide:pm-field-guide`。
 
 ## 內附工具：會算的，就不靠感覺
 

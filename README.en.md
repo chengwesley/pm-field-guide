@@ -213,15 +213,34 @@ Every guide follows the same structure: **When to use â†’ Ask before you start â
 
 ## Install
 
-One line:
+**Option 1: install as a plugin (recommended).** Type these two lines in Claude Code:
+
+```
+/plugin marketplace add chengwesley/pm-field-guide
+/plugin install pm-field-guide@pm-field-guide
+```
+
+The first line adds this repo as a source and the second installs it. To update later, run `/plugin marketplace update pm-field-guide`.
+
+The same two steps work from a terminal:
+
+```bash
+claude plugin marketplace add chengwesley/pm-field-guide
+```
+
+```bash
+claude plugin install pm-field-guide@pm-field-guide
+```
+
+**Option 2: git clone.** Use this when you want to edit the files and make a version for your own team:
 
 ```bash
 git clone https://github.com/chengwesley/pm-field-guide.git ~/.claude/skills/pm-field-guide
 ```
 
-That's it. There are no commands to learn. Describe your situation in Claude Code the way you'd tell a colleague, and it decides which guides to use.
+To use it in a single project only, clone it into that project's `.claude/skills/pm-field-guide` instead. Update with `git pull` in that folder.
 
-> Only want it in one project? Clone it into that project's `.claude/skills/pm-field-guide` instead.
+Pick one option. Once installed there is nothing more to learn: describe your situation in Claude Code the way you'd tell a colleague, and it decides which mode and which guides to use. To call it by hand, type `/pm-field-guide:pm-field-guide`.
 
 ## Bundled tools: if it can be calculated, don't guess
 
