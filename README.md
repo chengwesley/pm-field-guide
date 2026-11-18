@@ -238,7 +238,7 @@ git clone https://github.com/chengwesley/pm-field-guide.git ~/.claude/skills/pm-
 
 只想在某個專案裡用，就改放到該專案的 `.claude/skills/pm-field-guide`。更新時在那個資料夾執行 `git pull`。
 
-兩種方法擇一就好。裝好就能用，不需要再下任何指令：在 Claude Code 裡用平常講話的方式描述你的狀況，它會自己判斷要用哪種模式、哪幾份指南。想手動叫出來時，輸入 `/pm-field-guide:pm-field-guide`。
+兩種方法擇一就好。裝好就能用，不需要再下任何指令：在 Claude Code 裡用平常講話的方式描述你的狀況，它會自己判斷要用哪種模式、哪幾份指南。想手動叫出來時，在輸入框打 `/pm-field-guide`，從選單裡選它。
 
 ## 內附工具：會算的，就不靠感覺
 

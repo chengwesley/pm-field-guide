@@ -240,7 +240,7 @@ git clone https://github.com/chengwesley/pm-field-guide.git ~/.claude/skills/pm-
 
 To use it in a single project only, clone it into that project's `.claude/skills/pm-field-guide` instead. Update with `git pull` in that folder.
 
-Pick one option. Once installed there is nothing more to learn: describe your situation in Claude Code the way you'd tell a colleague, and it decides which mode and which guides to use. To call it by hand, type `/pm-field-guide:pm-field-guide`.
+Pick one option. Once installed there is nothing more to learn: describe your situation in Claude Code the way you'd tell a colleague, and it decides which mode and which guides to use. To call it by hand, type `/pm-field-guide` and pick it from the menu.
 
 ## Bundled tools: if it can be calculated, don't guess
 
