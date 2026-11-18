@@ -69,6 +69,8 @@ One body of knowledge, used differently depending on what you need right now. No
 <tr><td><b>Calculate</b></td><td>"What's our LTV?", "Is this result significant?", "How big is the market?"</td><td>Uses scripts instead of mental math, then tells you what the number means and which assumption to verify first</td></tr>
 </table>
 
+**Every deliverable comes in the same report format.** It opens with a header and the conclusion, puts the content in the middle, and ends with basis and confidence, what you need to confirm, and next steps with owners and due dates. Each of the 50 guides has its own title and conclusion pattern. A funnel analysis, for example, always leads with where the biggest drop-off is, how many users are lost, and the most likely cause. The format lives in [`modes/report.md`](modes/report.md), so you can change it to your team's house style.
+
 **It remembers your product.** After the first session it offers to save what you confirmed to `.pm/product.md`. From then on it reads that file and your decision log first, so it stops asking the same questions, and it warns you when a new request conflicts with an earlier decision. The files live in your own folder and you control what goes in them.
 
 <details>
@@ -94,7 +96,7 @@ Each playbook lists every step, what each step produces, and a minimum version f
 
 </details>
 
-Full rules for each mode: [Product context memory](modes/context.md) · [Review](modes/review.md) · [Rehearsal](modes/rehearsal.md) · [Playbooks](modes/playbooks.md)
+Full rules for each mode: [Report shell](modes/report.md) · [Product context memory](modes/context.md) · [Review](modes/review.md) · [Rehearsal](modes/rehearsal.md) · [Playbooks](modes/playbooks.md)
 
 ## Where are you right now?
 
@@ -260,7 +262,7 @@ The third command prints the result below (script output is in Traditional Chine
 
 - The scripts use only the Python standard library, and each one has `--help`. CSV headers can be in English or Chinese. Add `--json` for machine-readable output.
 - `dates.py` has no built-in public holidays, because holidays shouldn't be guessed. To skip them, supply your own holiday and make-up workday files with `--holidays` and `--makeup-workdays`.
-- The scripts ship with 172 automated tests: `python3 -m pytest scripts/tests`
+- The scripts and guide structure are covered by 183 automated tests: `python3 -m pytest scripts/tests`
 - To change the Excel templates, edit `scripts/build_templates.py` and regenerate. That script needs `openpyxl`.
 
 </details>
@@ -273,11 +275,11 @@ To tailor it to your team, change three things:
 
 1. **The "Language, context & compliance" section at the end of `SKILL.md`:** swap in your products, applicable regulations, and external review process.
 2. **The worked example in each guide:** replace it with your own product context, so Claude's examples match your reality.
-3. **The four mode files in `modes/`:** the severity bar for reviews, rehearsal difficulty, and playbook steps can all be changed to match how your team works.
+3. **The five files in `modes/`:** the report layout, the severity bar for reviews, rehearsal difficulty, and playbook steps can all be changed to match how your team works.
 
 ## Quality checks
 
-`evals/evals.json` contains 8 realistic PM scenarios covering all five modes, each with concrete grading criteria, for example:
+`evals/evals.json` contains 9 realistic PM scenarios covering all five modes, each with concrete grading criteria, for example:
 
 - Are non-goals stated?
 - Are acceptance criteria testable?

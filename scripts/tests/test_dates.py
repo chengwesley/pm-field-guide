@@ -142,6 +142,26 @@ class TestCheck(unittest.TestCase):
         finally:
             os.remove(path)
 
+    def test_weekday_label_with_a_short_note(self):
+        # 期限常標「提議」：2026-11-27（星期五，提議）、2026-11-27 (Fri, proposed) 都要核對得到
+        import tempfile
+        text = ("回覆期限 2026-11-27（星期五，提議）\n"     # 正確
+                "複查 2026-11-25（星期四，提議）\n"         # 實際是週三
+                "Reply by 2026-11-27 (Fri, proposed)\n"    # 正確
+                "Review 2026-11-24 (Mon; tentative)\n")    # 實際是週二
+        with tempfile.NamedTemporaryFile("w", suffix=".md", delete=False, encoding="utf-8") as f:
+            f.write(text)
+            path = f.name
+        try:
+            code, out, _ = run(["check", path, "--today", "2026-11-18", "--json"])
+            res = json.loads(out)
+            self.assertEqual(code, 1)
+            self.assertEqual(len(res["checked"]), 4)
+            self.assertEqual(sorted(c["line"] for c in res["checked"] if c["status"] != "OK"), [2, 4])
+            self.assertEqual(res["unlabeled"], [])
+        finally:
+            os.remove(path)
+
     def test_english_word_after_date_is_not_a_label(self):
         # 日期後面接的一般英文字（非星期）不可被當成星期標註
         import tempfile

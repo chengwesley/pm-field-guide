@@ -67,6 +67,8 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 <tr><td><b>計算</b></td><td>「算一下 LTV」「這個結果顯著嗎」「市場多大」</td><td>用腳本算，不用心算。告訴你數字代表什麼，以及哪個假設最該先查證</td></tr>
 </table>
 
+**每份交付物都是同一種報告格式。** 開頭是標頭和結論，中間是內容，最後是依據與信心、需要你確認的事、附負責人和期限的下一步。50 份指南各有專屬的標題與結論句型，例如漏斗分析的結論一定先講「最大漏損在哪一步、流失多少人、最可能的原因」。格式定義在 [`modes/report.md`](modes/report.md)，可以改成你們團隊的版型。
+
 **它會記住你的產品。** 第一次用完，它會問要不要把這次確認的資訊存成 `.pm/product.md`。之後每次都先讀這份檔案和決策紀錄，不再重問同樣的問題；你的新要求和以前的決定衝突時，它會先提醒你。檔案放在你自己的資料夾，內容由你決定。
 
 <details>
@@ -92,7 +94,7 @@ Claude 會依序讀三份指南：「需求分析」「需求排序」「Busines
 
 </details>
 
-各模式的完整規則：[產品脈絡記憶](modes/context.md) · [審查](modes/review.md) · [演練](modes/rehearsal.md) · [劇本](modes/playbooks.md)
+各模式的完整規則：[報告骨架](modes/report.md) · [產品脈絡記憶](modes/context.md) · [審查](modes/review.md) · [演練](modes/rehearsal.md) · [劇本](modes/playbooks.md)
 
 ## 你現在在哪個狀況？
 
@@ -258,7 +260,7 @@ python3 scripts/ab_test.py analyze examples/ab_test.csv
 
 - 腳本只用 Python 標準函式庫，每支都有 `--help`。CSV 欄名中英文都可以，加 `--json` 會輸出機器可讀的格式。
 - `dates.py` 沒有內建國定假日，因為假日不能用猜的。要跳過假日時，用 `--holidays` 和 `--makeup-workdays` 指定你自己的假日檔與補班日檔。
-- 腳本附 172 個自動化測試，執行：`python3 -m pytest scripts/tests`
+- 腳本與指南結構共有 183 個自動化測試，執行：`python3 -m pytest scripts/tests`
 - 要調整 Excel 表單，改 `scripts/build_templates.py` 後重新產生。這支需要 `openpyxl`。
 
 </details>
@@ -271,11 +273,11 @@ python3 scripts/ab_test.py analyze examples/ab_test.csv
 
 1. **`SKILL.md` 最後的「語言、情境與合規」**：換成你們的產品、適用法規與對外審核流程。
 2. **各指南的「情境範例」**：換成你們自己的產品情境，Claude 舉例時就會更貼近你們的狀況。
-3. **`modes/` 裡的四份模式說明**：審查的嚴重度標準、演練的難度、劇本的步驟，都可以照你們團隊的做法改。
+3. **`modes/` 裡的五份說明**：報告的版型、審查的嚴重度標準、演練的難度、劇本的步驟，都可以照你們團隊的做法改。
 
 ## 品質驗證
 
-`evals/evals.json` 有 8 個貼近實務的 PM 情境，涵蓋五種模式，每個都附具體的評分項目，例如：
+`evals/evals.json` 有 9 個貼近實務的 PM 情境，涵蓋五種模式，每個都附具體的評分項目，例如：
 
 - 有沒有寫非目標
 - 驗收條件能不能測

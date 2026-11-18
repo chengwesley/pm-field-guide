@@ -260,11 +260,13 @@ def render_weekday(r: dict) -> str:
 # 英文星期：Mon／Monday、Tue／Tues／Tuesday…，首字大寫，可帶句點
 _EN_DAY = (r"(?:Mon(?:day)?|Tue(?:s(?:day)?)?|Wed(?:nesday)?|Thu(?:r(?:s(?:day)?)?)?"
            r"|Fri(?:day)?|Sat(?:urday)?|Sun(?:day)?)")
+# 星期後面可以接一小段附註，例如（星期五，提議）、(Fri, proposed)
+_NOTE = r"(?:[，,、;；]\s*[^（()）\n]{1,16})?"
 EN_DAY_TO_INDEX = {"mon": 0, "tue": 1, "wed": 2, "thu": 3, "fri": 4, "sat": 5, "sun": 6}
 _LABEL = (
-    r"(?P<label>\s*(?:[（(]\s*(?:週|周|星期|禮拜)?\s*(?P<l1>[一二三四五六日天])\s*[）)]"
+    r"(?P<label>\s*(?:[（(]\s*(?:週|周|星期|禮拜)?\s*(?P<l1>[一二三四五六日天])\s*" + _NOTE + r"[）)]"
     r"|(?:週|周|星期|禮拜)\s*(?P<l2>[一二三四五六日天])"
-    r"|[（(]\s*(?P<l3>" + _EN_DAY + r")\.?\s*[）)]"
+    r"|[（(]\s*(?P<l3>" + _EN_DAY + r")\.?\s*" + _NOTE + r"[）)]"
     r"|,?\s*(?P<l4>" + _EN_DAY + r")\b(?![a-z])))"
 )
 # 日期本體：完整日期（含年份）、或月/日、月-日、M月D日
