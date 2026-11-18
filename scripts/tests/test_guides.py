@@ -20,7 +20,9 @@ def guides():
 
 
 def sections(text: str) -> list[str]:
-    return re.findall(r"^## (.+?)\s*$", text, re.M)
+    # 團隊客製版可能把範例段落加上前綴（例如「某公司 情境範例」），一律視為「情境範例」
+    found = re.findall(r"^## (.+?)\s*$", text, re.M)
+    return ["情境範例" if s.endswith("情境範例") else s for s in found]
 
 
 def template_section(text: str) -> str:
