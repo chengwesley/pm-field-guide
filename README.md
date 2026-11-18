@@ -280,7 +280,7 @@ python3 scripts/ab_test.py analyze examples/ab_test.csv
 
 - 腳本只用 Python 標準函式庫，每支都有 `--help`。CSV 欄名中英文都可以，加 `--json` 會輸出機器可讀的格式。
 - `dates.py` 沒有內建國定假日，因為假日不能用猜的。要跳過假日時，用 `--holidays` 和 `--makeup-workdays` 指定你自己的假日檔與補班日檔。
-- 腳本與指南結構共有 183 個自動化測試，執行：`python3 -m pytest scripts/tests`
+- 腳本與指南結構共有 185 個自動化測試，執行：`python3 -m pytest scripts/tests`
 - 要調整 Excel 表單，改 `scripts/build_templates.py` 後重新產生。這支需要 `openpyxl`。
 
 </details>

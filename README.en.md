@@ -282,7 +282,7 @@ The third command prints the result below (script output is in Traditional Chine
 
 - The scripts use only the Python standard library, and each one has `--help`. CSV headers can be in English or Chinese. Add `--json` for machine-readable output.
 - `dates.py` has no built-in public holidays, because holidays shouldn't be guessed. To skip them, supply your own holiday and make-up workday files with `--holidays` and `--makeup-workdays`.
-- The scripts and guide structure are covered by 183 automated tests: `python3 -m pytest scripts/tests`
+- The scripts and guide structure are covered by 185 automated tests: `python3 -m pytest scripts/tests`
 - To change the Excel templates, edit `scripts/build_templates.py` and regenerate. That script needs `openpyxl`.
 
 </details>

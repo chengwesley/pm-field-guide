@@ -125,5 +125,31 @@ class TestReferencesResolve(unittest.TestCase):
                     self.assertTrue((ROOT / "scripts" / s).exists(), f"指向不存在的腳本 {s}")
 
 
+
+class TestPluginManifest(unittest.TestCase):
+    """公開版才有 .claude-plugin/；團隊自己的複本沒有這個資料夾時略過。"""
+
+    def setUp(self):
+        self.manifest = ROOT / ".claude-plugin" / "plugin.json"
+        if not self.manifest.exists():
+            self.skipTest("沒有 plugin 設定檔")
+
+    def test_version_is_semver_and_matches_readme_badges(self):
+        import json
+        version = json.loads(self.manifest.read_text(encoding="utf-8")).get("version", "")
+        self.assertRegex(version, r"^\d+\.\d+\.\d+$", "plugin.json 要有 x.y.z 形式的版本號")
+        for name in ["README.md", "README.en.md"]:
+            readme = (ROOT / name).read_text(encoding="utf-8")
+            self.assertIn(f"badge/version-{version}-", readme, f"{name} 的版本徽章要跟 plugin.json 一致")
+
+    def test_marketplace_lists_this_plugin_once_without_its_own_version(self):
+        import json
+        market = json.loads((ROOT / ".claude-plugin" / "marketplace.json").read_text(encoding="utf-8"))
+        plugin = json.loads(self.manifest.read_text(encoding="utf-8"))
+        entries = [e for e in market["plugins"] if e["name"] == plugin["name"]]
+        self.assertEqual(len(entries), 1)
+        self.assertNotIn("version", entries[0], "版本只寫在 plugin.json，兩邊都寫會互相衝突")
+
+
 if __name__ == "__main__":
     unittest.main()
