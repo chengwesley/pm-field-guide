@@ -8,6 +8,7 @@
 It writes with you, reviews your drafts, rehearses hard conversations, walks you through whole workflows, runs the numbers with scripts, and remembers your product.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Guides](https://img.shields.io/badge/guides-50-green)
 ![Tools](https://img.shields.io/badge/tools-8_scripts_%2B_3_templates-yellow)
 ![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-skill-orange)

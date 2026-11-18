@@ -8,6 +8,7 @@
 它能幫你寫、幫你審、陪你練、帶你走完整個流程，數字用腳本算，還會記住你的產品。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Guides](https://img.shields.io/badge/guides-50-green)
 ![Tools](https://img.shields.io/badge/%E5%B7%A5%E5%85%B7-8_%E8%85%B3%E6%9C%AC_%2B_3_%E8%A1%A8%E5%96%AE-yellow)
 ![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-skill-orange)

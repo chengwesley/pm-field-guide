@@ -1,9 +1,18 @@
 {
   "name": "pm-field-guide",
+  "version": "1.0.0",
   "description": "A PM agent for software product managers: 50 guides, 5 working modes (produce, review, rehearse, playbook, calculate), 8 calculation scripts, and a report template for every output.",
-  "author": { "name": "Wesley Cheng" },
+  "author": {
+    "name": "Wesley Cheng"
+  },
   "homepage": "https://github.com/chengwesley/pm-field-guide",
   "repository": "https://github.com/chengwesley/pm-field-guide",
   "license": "MIT",
-  "keywords": ["product-management", "prd", "roadmap", "prioritization", "ab-testing"]
+  "keywords": [
+    "product-management",
+    "prd",
+    "roadmap",
+    "prioritization",
+    "ab-testing"
+  ]
 }
